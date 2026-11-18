@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neutral Dark Futuristic Design System */
+  --color-background: #0A0A0A;
+  --color-foreground: #FAFAFA;
+  --color-muted: #A1A1A1;
+  --color-border: #262626;
+  --color-card: #111111;
+  --color-accent: #E5E5E5;
+  --color-accent-active: #FFFFFF;
+  --color-glass: rgba(17, 17, 17, 0.8);
+
+  /* Extended spacing for editor layout */
+  --spacing-editor-width: 420px;
+
+  /* Letter spacing scale */
+  --tracking-3: 3px;
+
+  /* Extended font sizes for fine control */
+  --text-10: 10px;
+  --text-13: 13px;
+
+  /* Component specific sizes */
+  --width-caption-time: 92px;
+  --height-caption-min: 32px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Design System Utilities */
+.glass {
+  background-color: var(--color-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+}
+
+.hud-grid {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.caption-active {
+  background-color: rgba(255,255,255,0.08);
+  border-left: 2px solid var(--color-accent-active);
+}
+
+.neutral-btn {
+  transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.neutral-btn:hover {
+  background-color: var(--color-card);
+  border-color: var(--color-accent);
+}
+.neutral-btn:active {
+  transform: scale(0.985);
+}

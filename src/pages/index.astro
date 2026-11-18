@@ -1,5 +1,7 @@
 ---
-
+import { pwaInfo } from 'virtual:pwa-info';
+import App from '../components/App';
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -7,11 +9,16 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#0A0A0A" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Nexus Captions</title>
+		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+		<script src="/src/pwa.ts"></script>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-background text-foreground hud-grid min-h-screen">
+		<App client:only="react" />
+		<!-- Sonner Toaster will mount inside App -->
 	</body>
 </html>
+
