@@ -12,6 +12,10 @@ A local-first AI video caption editor. Everything runs in the browser — video 
 4. **Style** captions from 5 built-in presets, or tune them live in the style sider.
 5. **Export** an `.srt` file, a video with captions baked in (WebM), or both.
 
+Once a video is loaded, segments stay editable inline while the preview plays in sync:
+
+![Editor with a captioned video](docs/screenshots/editor-with-captions.png)
+
 ## Features
 
 - Split-view editor: live video preview with synced caption overlay + editable segment list
